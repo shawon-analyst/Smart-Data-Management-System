@@ -18,12 +18,6 @@ streamlit run app.py
 
 ---
 
-## 🔑 Admin Login
-
-```
-Username: admin
-Password: Admin@123
-```
 
 ⚠️ **Production-এ deploy করার আগে অবশ্যই `auth.py` ফাইলের `ADMIN_PASSWORD` পরিবর্তন করুন।**
 
