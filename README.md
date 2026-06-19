@@ -64,21 +64,7 @@ sdms/
 
 ---
 
-## ⚠️ গুরুত্বপূর্ণ সীমাবদ্ধতা (Important Limitations)
 
-এটি **SQLite-ভিত্তিক single-file ডাটাবেস** ব্যবহার করে — এটা ছোট থেকে মাঝারি স্কেলের
-টিম, ইন্টারনাল টুল, ডেমো, বা ক্লায়েন্ট প্রেজেন্টেশনের জন্য পুরোপুরি উপযুক্ত। তবে:
-
-- **অনেক বেশি concurrent user** (একসাথে শত শত write request) হ্যান্ডেল করার জন্য
-  optimal না — সেক্ষেত্রে PostgreSQL/MySQL-এ migrate করা ভালো।
-- **Streamlit Community Cloud**-এ deploy করলে filesystem মাঝে মাঝে reset হতে পারে,
-  ফলে `data/sdms.db` হারিয়ে যেতে পারে। সেক্ষেত্রে নিয়মিত backup নেওয়ার ব্যবস্থা রাখুন,
-  বা একটি managed cloud database (যেমন Turso, Supabase Postgres) ব্যবহার করুন।
-- Password hashing PBKDF2 (200,000 iterations) দিয়ে করা হয়েছে — এটা যথেষ্ট নিরাপদ,
-  কিন্তু সত্যিকারের production SaaS-এর জন্য HTTPS deployment আবশ্যক (cookie token
-  ও password নেটওয়ার্কে যাতে plain text-এ না যায়)।
-
----
 
 ## 🔧 পরবর্তীতে যা যোগ করা যেতে পারে
 
